@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Management | Auto-Mobiles Portal</title>
+  <meta name="description" content="Sign in to your fleet telemetry dashboard, update credentials, or create a developer calibration profile.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.359.0/dist/umd/lucide.min.js"></script>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" aria-label="Auto-Mobiles Home">
+        <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <button class="hamburger" aria-expanded="false" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="home-niche.html" class="nav-link">SaaS Landing</a></li>
+          <li class="nav-dropdown">
+            <a href="services.html" class="nav-link">Services <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="services.html">All Services</a></li>
+              <li class="dropdown-item"><a href="service-details.html">Service Details</a></li>
+            </ul>
+          </li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-dropdown">
+            <a href="blog.html" class="nav-link">Blog <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="blog.html">Articles</a></li>
+              <li class="dropdown-item"><a href="blog-details.html">Blog Post Details</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="login-register.html" class="btn btn-secondary btn-sm nav-link active" style="margin-top: 4px; padding-inline: var(--space-4);">Sign In</a></li>
+          <li><a href="admin-dashboard.html" class="btn btn-primary btn-sm" style="margin-top: 4px;">Admin</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="sun"></i>
+        </button>
+        <button class="control-btn dir-toggle" aria-label="Toggle Layout Direction">
+          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login/Register Card Container -->
+  <main id="main-content" class="flex-center" style="flex: 1; padding: var(--space-8); position: relative; overflow: hidden;">
+    <div class="animated-bg"></div>
+    
+    <div class="glass-panel" style="width: 100%; max-width: 440px; padding: var(--space-8); relative: z-index: 10;">
+      
+      <!-- Auth Switcher Header -->
+      <div style="display: flex; border-bottom: 1px solid var(--border-color); padding-bottom: var(--space-4); margin-bottom: var(--space-6); justify-content: space-around;">
+        <button class="tab-btn active" id="btn-show-login" style="font-size: 1.1rem; border-bottom: 2px solid transparent;">Log In</button>
+        <button class="tab-btn" id="btn-show-register" style="font-size: 1.1rem; border-bottom: 2px solid transparent;">Register</button>
+      </div>
+
+      <!-- Login Form Card -->
+      <form class="needs-validation" id="form-login" novalidate style="display: flex; flex-direction: column; gap: var(--space-4);">
+        <h2 style="font-family: var(--font-primary); font-size: 1.3rem; margin-bottom: var(--space-2);">Welcome Back</h2>
+        
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="login-email" class="form-label">Email Address</label>
+          <input type="email" id="login-email" required class="form-control" />
+          <div class="tooltip">Please enter a valid email.</div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="login-pass" class="form-label">Password</label>
+          <input type="password" id="login-pass" required minlength="6" class="form-control" />
+          <div class="tooltip">Must be at least 6 characters.</div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+          <label style="display: flex; align-items: center; gap: var(--space-2);">
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="#" style="color: var(--color-primary);">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: var(--space-2);">
+          Sign In to Account
+        </button>
+      </form>
+
+      <!-- Register Form Card (Initially hidden) -->
+      <form class="needs-validation" id="form-register" novalidate style="display: none; flex-direction: column; gap: var(--space-4);">
+        <h2 style="font-family: var(--font-primary); font-size: 1.3rem; margin-bottom: var(--space-2);">Create Calibration Account</h2>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="reg-name" class="form-label">Full Name</label>
+          <input type="text" id="reg-name" required class="form-control" />
+          <div class="tooltip">Please enter your name.</div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="reg-email" class="form-label">Email Address</label>
+          <input type="email" id="reg-email" required class="form-control" />
+          <div class="tooltip">Please enter a valid email.</div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0;">
+          <label for="reg-pass" class="form-label">Password</label>
+          <input type="password" id="reg-pass" required minlength="8" class="form-control" />
+          <div class="tooltip">Must be at least 8 characters.</div>
+        </div>
+
+        <label style="display: flex; align-items: flex-start; gap: var(--space-2); font-size: 0.8rem; line-height: 1.4;">
+          <input type="checkbox" required /> 
+          <span>I agree to the Terms of Service & telemetry data disclosure.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: var(--space-2);">
+          Initialize Account
+        </button>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-column">
+        <a href="../index.html" class="logo" style="margin-bottom: var(--space-4);">
+          <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+        </a>
+        <p style="font-size: 0.9rem;">
+          Pioneering the intersection of electric vehicles, software analytics, and custom performance engineering.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="home-niche.html">Analytics SaaS</a></li>
+          <li><a href="services.html">EV Conversions</a></li>
+          <li><a href="services.html">Performance Tuning</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pricing.html">Pricing Plans</a></li>
+          <li><a href="blog.html">Read Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="coming-soon.html">Coming Soon</a></li>
+          <li><a href="404.html">404 Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Auto-Mobiles Digital Ecosystem. All rights reserved.</p>
+      <div style="display: flex; gap: var(--space-4);">
+        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const showLogin = document.getElementById('btn-show-login');
+      const showRegister = document.getElementById('btn-show-register');
+      const formLogin = document.getElementById('form-login');
+      const formRegister = document.getElementById('form-register');
+
+      showLogin.addEventListener('click', () => {
+        showLogin.classList.add('active');
+        showRegister.classList.remove('active');
+        formLogin.style.display = 'flex';
+        formRegister.style.display = 'none';
+      });
+
+      showRegister.addEventListener('click', () => {
+        showRegister.classList.add('active');
+        showLogin.classList.remove('active');
+        formRegister.style.display = 'flex';
+        formLogin.style.display = 'none';
+      });
+
+      // Handle simulated login success -> redirect to Admin dashboard
+      formLogin.addEventListener('submit', (e) => {
+        const email = document.getElementById('login-email').value;
+        const pass = document.getElementById('login-pass').value;
+        
+        if (email.includes('@') && pass.length >= 6) {
+          e.preventDefault();
+          // Store dummy user session
+          localStorage.setItem('user_session', JSON.stringify({ email: email, loginTime: new Date() }));
+          // Redirect to customer dashboard
+          window.location.href = 'user-dashboard.html';
+        }
+      });
+
+      formRegister.addEventListener('submit', (e) => {
+        const name = document.getElementById('reg-name').value;
+        const email = document.getElementById('reg-email').value;
+        const pass = document.getElementById('reg-pass').value;
+
+        if (name && email.includes('@') && pass.length >= 8) {
+          e.preventDefault();
+          alert('Account initialized successfully! Redirecting to login.');
+          showLogin.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

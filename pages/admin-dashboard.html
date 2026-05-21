@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Auto-Mobiles Systems Control</title>
+  <meta name="description" content="Manage telemetry feeds, view connected fleet diagnostic status, process orders, and read client support inquiries.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.359.0/dist/umd/lucide.min.js"></script>
+</head>
+<body style="min-height: 100vh; background-color: var(--bg-primary);">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Admin layout wrapper -->
+  <div class="admin-layout">
+    
+    <!-- Sidebar navigation -->
+    <aside class="admin-sidebar" aria-label="Admin Sidebar">
+      <div style="display: flex; gap: var(--space-2); align-items: center; margin-bottom: var(--space-4);">
+        <a href="../index.html" class="logo">
+          <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+        </a>
+      </div>
+
+      <nav aria-label="Dashboard Panels">
+        <ul class="admin-menu">
+          <li>
+            <button class="admin-menu-link active" data-target="panel-analytics" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="bar-chart-3"></i> <span>Analytics</span>
+            </button>
+          </li>
+          <li>
+            <button class="admin-menu-link" data-target="panel-users" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="users"></i> <span>Users</span>
+            </button>
+          </li>
+          <li>
+            <button class="admin-menu-link" data-target="panel-orders" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="shopping-cart"></i> <span>Orders</span>
+            </button>
+          </li>
+          <li>
+            <button class="admin-menu-link" data-target="panel-messages" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="mail"></i> <span>Messages</span> <span id="msg-badge" style="background: var(--color-danger); color: #fff; font-size: 0.7rem; padding: 2px 6px; border-radius: 20px; display: none;"></span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: var(--space-3);">
+        <button class="control-btn theme-toggle" aria-label="Toggle Theme" style="width: 100%;">
+          <i data-lucide="sun"></i>
+        </button>
+        <button class="control-btn dir-toggle" aria-label="Toggle Layout Direction" style="width: 100%;">
+          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+        <a href="../index.html" class="btn btn-secondary btn-sm" style="text-align: center;">Log Out</a>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel Area -->
+    <main class="admin-content" id="main-content">
+      
+      <!-- Panel 1: Analytics -->
+      <section class="tab-panel active" id="panel-analytics">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-8); flex-wrap: wrap; gap: var(--space-4);">
+          <div>
+            <h1>Control Panel</h1>
+            <p>Real-time vehicle telemetry diagnostic stream.</p>
+          </div>
+          <div class="glass-panel" style="padding: var(--space-3) var(--space-5); text-align: center;">
+            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Telemetry Packets</span>
+            <h4 id="metrics-counter" style="font-size: 1.25rem; color: var(--color-primary);">42,893,120</h4>
+          </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="grid-4 mb-8">
+          <div class="glass-panel" style="padding: var(--space-5);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Active Fleet Nodes</span>
+              <i data-lucide="car" style="color: var(--color-primary);"></i>
+            </div>
+            <h3 style="font-size: 2rem;">2,842</h3>
+            <span style="font-size: 0.75rem; color: var(--color-success); font-weight: 600;">&uarr; 12% vs yesterday</span>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-5);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Core Latency</span>
+              <i data-lucide="activity" style="color: var(--color-primary);"></i>
+            </div>
+            <h3 style="font-size: 2rem;">12.4ms</h3>
+            <span style="font-size: 0.75rem; color: var(--color-success); font-weight: 600;">Stable API pipeline</span>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-5);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Energy Consumed</span>
+              <i data-lucide="zap" style="color: var(--color-primary);"></i>
+            </div>
+            <h3 style="font-size: 2rem;">14.2 MWh</h3>
+            <span style="font-size: 0.75rem; color: var(--text-secondary);">Cumulative monthly</span>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-5);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-3);">
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">System Load</span>
+              <i data-lucide="cpu" style="color: var(--color-primary);"></i>
+            </div>
+            <h3 style="font-size: 2rem;">34.8%</h3>
+            <span style="font-size: 0.75rem; color: var(--color-success); font-weight: 600;">Dynamic scaling ok</span>
+          </div>
+        </div>
+
+        <!-- SVG animated gauges -->
+        <div class="grid-2">
+          <div class="glass-panel" style="padding: var(--space-6); text-align: center;">
+            <h3 class="mb-6">Global Battery Health</h3>
+            <div style="position: relative; width: 150px; height: 150px; margin-inline: auto;">
+              <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--bg-tertiary)" stroke-width="8"></circle>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--color-primary)" stroke-width="8" class="chart-circle"></circle>
+              </svg>
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                <h4 style="font-size: 1.5rem; margin-bottom: 0;">94%</h4>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Efficiency</span>
+              </div>
+            </div>
+          </div>
+          <div class="glass-panel" style="padding: var(--space-6); text-align: center;">
+            <h3 class="mb-6">SaaS Node Availability</h3>
+            <div style="position: relative; width: 150px; height: 150px; margin-inline: auto;">
+              <svg viewBox="0 0 100 100" style="width: 100%; height: 100%;">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--bg-tertiary)" stroke-width="8"></circle>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--color-success)" stroke-width="8" class="chart-circle" style="stroke-dashoffset: 40;"></circle>
+              </svg>
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                <h4 style="font-size: 1.5rem; margin-bottom: 0;">99.98%</h4>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Uptime SLA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Panel 2: Users -->
+      <section class="tab-panel" id="panel-users">
+        <h1 class="mb-4">System Users</h1>
+        <p class="mb-8">Add, edit, or configure access controls for telemetry users.</p>
+        
+        <div class="table-responsive">
+          <table class="pricing-matrix" style="margin-top: 0;">
+            <thead>
+              <tr>
+                <th>User Account</th>
+                <th>Access Level</th>
+                <th>Connected Node</th>
+                <th>Operations</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: start;">
+                  <strong>Marcus Vance</strong>
+                  <span style="display: block; font-size: 0.75rem; color: var(--text-secondary);">marcus@vance-conversions.de</span>
+                </td>
+                <td>Client Dev</td>
+                <td>Tesla Model S Roadster</td>
+                <td><button class="btn btn-secondary btn-sm user-ban-btn">Suspend</button></td>
+              </tr>
+              <tr>
+                <td style="text-align: start;">
+                  <strong>Sarah Jenkins</strong>
+                  <span style="display: block; font-size: 0.75rem; color: var(--text-secondary);">s.jenkins@transit-logistics.dk</span>
+                </td>
+                <td>Fleet Manager</td>
+                <td>EV Sprinter Flatbed (x12)</td>
+                <td><button class="btn btn-secondary btn-sm user-ban-btn">Suspend</button></td>
+              </tr>
+              <tr>
+                <td style="text-align: start;">
+                  <strong>Alexander Kross</strong>
+                  <span style="display: block; font-size: 0.75rem; color: var(--text-secondary);">a.kross@kross-tuning.com</span>
+                </td>
+                <td>SysAdmin</td>
+                <td>System Nodes (All)</td>
+                <td><button class="btn btn-secondary btn-sm user-ban-btn">Suspend</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Panel 3: Orders -->
+      <section class="tab-panel" id="panel-orders">
+        <h1 class="mb-4">Recent Orders</h1>
+        <p class="mb-8">Process mechanical upgrades and SaaS license subscriptions.</p>
+        
+        <div class="table-responsive">
+          <table class="pricing-matrix" style="margin-top: 0;">
+            <thead>
+              <tr>
+                <th>Order Ref</th>
+                <th>Client Name</th>
+                <th>Hardware / SaaS Option</th>
+                <th>Invoice</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#EV-8840</td>
+                <td>Marcus Vance</td>
+                <td>Performance Core Retrofitting</td>
+                <td>$32,000</td>
+                <td><span style="color: var(--color-success); font-weight: 600;">COMPLETED</span></td>
+              </tr>
+              <tr>
+                <td>#LIC-1209</td>
+                <td>Sarah Jenkins</td>
+                <td>Fleet Professional (Annual)</td>
+                <td>$1,428</td>
+                <td><span style="color: var(--color-accent); font-weight: 600;">ACTIVE BILLING</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Panel 4: Messages -->
+      <section class="tab-panel" id="panel-messages">
+        <h1 class="mb-4">Inbox Inquiries</h1>
+        <p class="mb-8">Direct user enquiries dispatched via Contact forms.</p>
+        
+        <!-- Live simulated Inbox feed -->
+        <div id="dashboard-inbox" style="display: flex; flex-direction: column; gap: var(--space-4);">
+          <!-- Dynamic comments loaded via JS -->
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sidebar Tab Toggling
+      const menuLinks = document.querySelectorAll('.admin-menu-link');
+      const panels = document.querySelectorAll('.tab-panel');
+
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          menuLinks.forEach(l => l.classList.remove('active'));
+          panels.forEach(p => p.classList.remove('active'));
+
+          link.classList.add('active');
+          const target = link.getAttribute('data-target');
+          document.getElementById(target).classList.add('active');
+        });
+      });
+
+      // Suspended User Simulation
+      const suspendButtons = document.querySelectorAll('.user-ban-btn');
+      suspendButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isSuspended = btn.textContent === 'Activate';
+          btn.textContent = isSuspended ? 'Suspend' : 'Activate';
+          btn.classList.toggle('btn-primary', !isSuspended);
+          btn.classList.toggle('btn-secondary', isSuspended);
+        });
+      });
+
+      // Live Telemetry Counter simulation
+      const counterElement = document.getElementById('metrics-counter');
+      let counterVal = 42893120;
+      setInterval(() => {
+        counterVal += Math.floor(Math.random() * 8) + 1;
+        counterElement.textContent = counterVal.toLocaleString();
+      }, 1000);
+
+      // LocalStorage Inbox messages retriever
+      const inboxContainer = document.getElementById('dashboard-inbox');
+      const badge = document.getElementById('msg-badge');
+
+      function loadMessages() {
+        inboxContainer.innerHTML = '';
+        const messages = JSON.parse(localStorage.getItem('admin_messages') || '[]');
+        
+        // Add 2 initial default messages if inbox empty to keep layout rich
+        if (messages.length === 0) {
+          const defaults = [
+            {
+              id: 1,
+              name: 'John Doe',
+              email: 'john@carbon-logistics.de',
+              subject: 'conversion',
+              text: 'Interested in converting 4 vans to 800V lithium cells. Please send full volume custom quote options.',
+              date: '10:45 AM'
+            },
+            {
+              id: 2,
+              name: 'Elena Rostova',
+              email: 'e.rostova@analytics-hub.eu',
+              subject: 'telemetry',
+              text: 'Is there a sandbox API endpoint where we can push mock cell currents data to test limits before purchasing Fleet Pro?',
+              date: '09:12 AM'
+            }
+          ];
+          localStorage.setItem('admin_messages', JSON.stringify(defaults));
+          loadMessages();
+          return;
+        }
+
+        // Render badge count
+        badge.textContent = messages.length;
+        badge.style.display = messages.length > 0 ? 'inline-block' : 'none';
+
+        messages.forEach(msg => {
+          const card = document.createElement('div');
+          card.className = 'glass-panel';
+          card.style.padding = 'var(--space-6)';
+          card.style.display = 'flex';
+          card.style.justifyContent = 'space-between';
+          card.style.alignItems = 'start';
+          card.style.gap = 'var(--space-4)';
+          card.style.flexWrap = 'wrap';
+
+          card.innerHTML = `
+            <div style="flex: 1;">
+              <div style="display: flex; gap: var(--space-3); align-items: center; margin-bottom: var(--space-2);">
+                <span class="card-tag btn-sm">${msg.subject.toUpperCase()}</span>
+                <strong>${escapeHTML(msg.name)}</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">&bull; ${msg.email} &bull; ${msg.date}</span>
+              </div>
+              <p style="font-size: 0.95rem; line-height: 1.6;">${escapeHTML(msg.text)}</p>
+            </div>
+            <button class="btn btn-secondary btn-sm delete-msg-btn" data-id="${msg.id}" style="color: var(--color-danger); border-color: rgba(239, 68, 68, 0.3);">
+              <i data-lucide="trash" style="width: 14px; height: 14px; vertical-align: middle;"></i> Remove
+            </button>
+          `;
+
+          inboxContainer.appendChild(card);
+        });
+
+        // Initialize newly appended trash icons
+        lucide.createIcons();
+
+        // Add Delete events
+        const deleteButtons = inboxContainer.querySelectorAll('.delete-msg-btn');
+        deleteButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idToDelete = parseInt(btn.getAttribute('data-id'));
+            const updated = JSON.parse(localStorage.getItem('admin_messages') || '[]')
+                              .filter(m => m.id !== idToDelete);
+            localStorage.setItem('admin_messages', JSON.stringify(updated));
+            loadMessages();
+          });
+        });
+      }
+
+      function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+          tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+        );
+      }
+
+      loadMessages();
+    });
+  </script>
+</body>
+</html>

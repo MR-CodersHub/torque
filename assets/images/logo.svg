@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="torque-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Outer Ring representing a tachometer/gauge -->
+  <circle cx="50" cy="50" r="42" stroke="url(#torque-gradient)" stroke-width="6" fill="none" stroke-dasharray="200 60" filter="url(#glow)" />
+  <!-- Inner Speedometer Markings -->
+  <path d="M 50 15 L 50 20 M 85 50 L 80 50 M 50 85 L 50 80 M 15 50 L 20 50" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" opacity="0.6" />
+  <!-- Bolt / Lightning shape combined with Torque Rotor -->
+  <path d="M 55 25 L 35 52 L 48 52 L 42 75 L 65 48 L 52 48 Z" fill="url(#torque-gradient)" filter="url(#glow)" />
+  <!-- Center Indicator Dot -->
+  <circle cx="50" cy="50" r="4" fill="#FFFFFF" />
+</svg>

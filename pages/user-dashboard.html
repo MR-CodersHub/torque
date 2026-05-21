@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | Auto-Mobiles Customer Portal</title>
+  <meta name="description" content="Customer dashboard for booking appointments, choosing service packages, uploading vehicle photos, tracking service van location, and managing loyalty rewards.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.359.0/dist/umd/lucide.min.js"></script>
+</head>
+<body style="min-height: 100vh; background-color: var(--bg-primary);">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" aria-label="Auto-Mobiles Home">
+        <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+      </a>
+      <nav aria-label="User Navigation">
+        <button class="hamburger" aria-expanded="false" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-dropdown profile-menu">
+            <button class="btn btn-secondary btn-sm profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
+              <i data-lucide="user"></i>
+            </button>
+            <ul class="dropdown-menu profile-dropdown">
+              <li class="dropdown-item"><a href="login-register.html">Sign In</a></li>
+              <li class="dropdown-item"><a href="login-register.html">Sign Up</a></li>
+              <li class="dropdown-item"><a href="admin-dashboard.html">Admin Dashboard</a></li>
+              <li class="dropdown-item"><a href="user-dashboard.html">User Dashboard</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-controls">
+        <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="sun"></i>
+        </button>
+        <button class="control-btn dir-toggle" aria-label="Toggle Layout Direction">
+          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" aria-label="Dashboard Navigation">
+      <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+        <div style="display: flex; gap: var(--space-2); align-items: center;">
+          <i data-lucide="user" style="color: var(--color-primary);"></i>
+          <div>
+            <span style="font-size: 0.85rem; color: var(--text-secondary);">Welcome Back</span>
+            <h2 style="font-size: 1.35rem; margin-top: var(--space-1);">Avery Smith</h2>
+          </div>
+        </div>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7;">Manage your appointments, upload vehicle photos, choose packages, track the service van, and redeem loyalty rewards from one place.</p>
+      </div>
+
+      <nav aria-label="Dashboard panels">
+        <ul class="dashboard-menu-list">
+          <li><a href="#overview" class="admin-menu-link active"><i data-lucide="home"></i> Overview</a></li>
+          <li><a href="#bookings" class="admin-menu-link"><i data-lucide="calendar"></i> Bookings</a></li>
+          <li><a href="#packages" class="admin-menu-link"><i data-lucide="package"></i> Packages</a></li>
+          <li><a href="#uploads" class="admin-menu-link"><i data-lucide="camera"></i> Uploads</a></li>
+          <li><a href="#tracking" class="admin-menu-link"><i data-lucide="map-pin"></i> Track Van</a></li>
+          <li><a href="#rewards" class="admin-menu-link"><i data-lucide="gift"></i> Rewards</a></li>
+        </ul>
+      </nav>
+
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: var(--space-3);">
+        <button class="control-btn theme-toggle" aria-label="Toggle Theme" style="width: 100%;">
+          <i data-lucide="sun"></i>
+        </button>
+        <button class="control-btn dir-toggle" aria-label="Toggle Layout Direction" style="width: 100%;">
+          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+        <a href="../index.html" class="btn btn-secondary btn-sm" style="text-align: center;">Log Out</a>
+      </div>
+    </aside>
+
+    <main class="dashboard-content" id="main-content">
+      <section id="overview" class="glass-panel" style="padding: var(--space-8); margin-bottom: var(--space-8);">
+        <div style="display: flex; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; align-items: center;">
+          <div>
+            <span class="card-tag">Customer Portal</span>
+            <h1 style="margin-top: var(--space-4);">Your service experience, simplified.</h1>
+            <p style="max-width: 640px; margin-top: var(--space-4); color: var(--text-secondary);">Book appointments, preview packages, upload vehicle photos for estimates, watch the service van arrive, and redeem loyalty rewards all from one dashboard.</p>
+          </div>
+          <div class="glass-panel" style="padding: var(--space-6); min-width: 240px; text-align: center; border: 1px solid rgba(var(--color-primary-rgb),0.2);">
+            <span style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase;">Loyalty Points</span>
+            <h2 style="margin: var(--space-3) 0; color: var(--color-primary);">1,420</h2>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Silver tier — 3 rewards unlocked</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="dashboard-grid">
+        <section id="bookings" class="glass-panel dashboard-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
+            <div>
+              <h2>Next Appointment</h2>
+              <p style="color: var(--text-secondary);">Your next service slot is reserved and ready for confirmation.</p>
+            </div>
+            <span class="status-pill status-info">Confirmed</span>
+          </div>
+          <div style="display: grid; gap: var(--space-4);">
+            <div style="display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap;">
+              <div>
+                <strong>Oct 22, 2026</strong>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">09:00 AM – 11:00 AM</p>
+              </div>
+              <div>
+                <strong>Vehicle</strong>
+                <p style="font-size: 0.95rem; color: var(--text-secondary);">2022 Nissan Leaf</p>
+              </div>
+            </div>
+            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+              <button class="btn btn-primary" id="btn-confirm-booking">Confirm & Notify</button>
+              <button class="btn btn-secondary" id="btn-reschedule">Request new time</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="rewards" class="glass-panel dashboard-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
+            <div>
+              <h2>Loyalty Rewards</h2>
+              <p style="color: var(--text-secondary);">Track points, unlock benefits, and redeem offers instantly.</p>
+            </div>
+            <span class="status-pill status-success">Silver</span>
+          </div>
+          <div style="display: grid; gap: var(--space-4);">
+            <div class="glass-panel" style="padding: var(--space-5); background: rgba(var(--color-secondary-rgb, 59, 130, 246), 0.08); border-color: rgba(var(--color-secondary-rgb, 59, 130, 246), 0.16);">
+              <strong>3/5 Rewards claimed</strong>
+              <p style="color: var(--text-secondary); margin-top: var(--space-2);">Free exterior detail, priority slot booking, and 10% parts credit.</p>
+            </div>
+            <button class="btn btn-accent" id="btn-redeem-reward">Redeem reward</button>
+          </div>
+        </section>
+
+        <section id="tracking" class="glass-panel dashboard-card" style="grid-column: span 2;">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
+            <div>
+              <h2>Service Van Tracker</h2>
+              <p style="color: var(--text-secondary);">Follow the technician van as it approaches your location in real-time.</p>
+            </div>
+            <span class="status-pill status-success" id="van-status-pill">On route</span>
+          </div>
+          <div class="map-viewport" aria-label="Service van location map">
+            <div class="map-dot" id="van-dot" aria-hidden="true"></div>
+            <div class="map-label" id="van-distance">2.4 km away</div>
+          </div>
+          <div style="display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4);">
+            <div>
+              <strong>Estimated arrival</strong>
+              <p style="color: var(--text-secondary);">~18 minutes</p>
+            </div>
+            <div>
+              <strong>Current Route</strong>
+              <p style="color: var(--text-secondary);">Westbrook Ave → Main Street</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="packages" class="glass-panel dashboard-card">
+          <div style="margin-bottom: var(--space-6);">
+            <h2>Select Service Package</h2>
+            <p style="color: var(--text-secondary);">Choose the package that matches your service needs. Your selection will be used for estimate and booking details.</p>
+          </div>
+          <div class="dashboard-package-grid">
+            <label class="package-card">
+              <input type="radio" name="service-package" value="Basic Inspection" checked>
+              <strong>Basic Inspection</strong>
+              <span>Vehicle health check, diagnostics, and quote.</span>
+            </label>
+            <label class="package-card">
+              <input type="radio" name="service-package" value="Standard Service">
+              <strong>Standard Service</strong>
+              <span>Includes oil, filter, brake check, and safety inspection.</span>
+            </label>
+            <label class="package-card">
+              <input type="radio" name="service-package" value="Premium Estimate">
+              <strong>Premium Estimate</strong>
+              <span>Customized estimate with photo-backed assessment and priority scheduling.</span>
+            </label>
+          </div>
+        </section>
+
+        <section id="uploads" class="glass-panel dashboard-card" style="grid-column: span 2;">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
+            <div>
+              <h2>Upload Vehicle Photos</h2>
+              <p style="color: var(--text-secondary);">Add images of your vehicle concerns so the techs can prepare an accurate estimate before arrival.</p>
+            </div>
+            <button class="btn btn-primary" id="btn-upload-mobile">Select photos</button>
+          </div>
+          <form class="needs-validation" id="upload-form">
+            <div class="form-group">
+              <label class="form-label" for="vehicle-photos">Upload up to 5 images</label>
+              <input type="file" class="form-control" id="vehicle-photos" accept="image/*" multiple aria-describedby="upload-help">
+              <div id="upload-help" style="font-size: 0.85rem; color: var(--text-muted); margin-top: var(--space-2);">Photos help us estimate damage, service time, and parts needs.</div>
+            </div>
+          </form>
+          <div class="image-preview-grid" id="photo-previews" aria-live="polite"></div>
+        </section>
+
+        <section class="glass-panel dashboard-card">
+          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
+            <div>
+              <h2>Appointments & Requests</h2>
+              <p style="color: var(--text-secondary);">Your upcoming bookings and active estimates.</p>
+            </div>
+            <button class="btn btn-secondary" id="btn-add-test-appointment">Add sample request</button>
+          </div>
+          <div class="table-responsive">
+            <table class="pricing-matrix" id="appointment-table">
+              <thead>
+                <tr>
+                  <th>Appointment</th>
+                  <th>Status</th>
+                  <th>Package</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Battery health scan</td>
+                  <td><span class="status-pill status-success">Ready</span></td>
+                  <td>Premium Estimate</td>
+                  <td>Oct 22</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const packageRadios = document.querySelectorAll('input[name="service-package"]');
+      const uploadInput = document.getElementById('vehicle-photos');
+      const photoPreviews = document.getElementById('photo-previews');
+      const vanDot = document.getElementById('van-dot');
+      const vanDistance = document.getElementById('van-distance');
+      const vanStatus = document.getElementById('van-status-pill');
+      const btnUploadMobile = document.getElementById('btn-upload-mobile');
+      const btnConfirmBooking = document.getElementById('btn-confirm-booking');
+      const btnReschedule = document.getElementById('btn-reschedule');
+      const btnRedeemReward = document.getElementById('btn-redeem-reward');
+      const appointmentTable = document.getElementById('appointment-table').querySelector('tbody');
+
+      const savedPackage = localStorage.getItem('auto_mobiles_selected_package');
+      if (savedPackage) {
+        const savedRadio = document.querySelector(`input[name="service-package"][value="${savedPackage}"]`);
+        if (savedRadio) savedRadio.checked = true;
+      }
+
+      packageRadios.forEach(radio => {
+        radio.addEventListener('change', () => {
+          localStorage.setItem('auto_mobiles_selected_package', radio.value);
+        });
+      });
+
+      btnUploadMobile.addEventListener('click', () => uploadInput.click());
+      uploadInput.addEventListener('change', handlePhotoUpload);
+
+      btnConfirmBooking.addEventListener('click', () => {
+        alert('Booking confirmed. Our team has been notified and the service van will arrive on schedule.');
+      });
+
+      btnReschedule.addEventListener('click', () => {
+        alert('A reschedule request has been submitted. We will contact you with the next available slot.');
+      });
+
+      btnRedeemReward.addEventListener('click', () => {
+        alert('Reward redemption request received. A voucher will be sent to your email within minutes.');
+      });
+
+      document.getElementById('btn-add-test-appointment').addEventListener('click', () => {
+        const row = document.createElement('tr');
+        row.innerHTML = '<td>Detailing estimate</td><td><span class="status-pill status-info">Review</span></td><td>Standard Service</td><td>Oct 30</td>';
+        appointmentTable.appendChild(row);
+      });
+
+      function handlePhotoUpload() {
+        const files = Array.from(uploadInput.files).slice(0, 5);
+        photoPreviews.innerHTML = '';
+
+        if (files.length === 0) {
+          photoPreviews.innerHTML = '<p style="color: var(--text-secondary);">No photos selected yet. Upload clear shots of the damaged or service area.</p>';
+          return;
+        }
+
+        files.forEach(file => {
+          const reader = new FileReader();
+          const card = document.createElement('div');
+          card.className = 'glass-panel';
+          card.style.padding = 'var(--space-3)';
+          card.style.display = 'grid';
+          card.style.gap = 'var(--space-2)';
+          card.style.textAlign = 'center';
+
+          reader.addEventListener('load', () => {
+            card.innerHTML = `
+              <img src="${reader.result}" alt="Uploaded vehicle photo" style="border-radius: var(--border-radius-sm); max-height: 140px; width: auto; margin-inline: auto; display: block; object-fit: cover;">
+              <span style="font-size: 0.9rem; color: var(--text-secondary);">${file.name}</span>
+            `;
+          });
+          reader.readAsDataURL(file);
+          photoPreviews.appendChild(card);
+        });
+      }
+
+      function updateVanLocation() {
+        const progress = Math.random() * 80 + 10;
+        vanDot.style.left = progress + '%';
+        const distance = Math.max(0.2, ((100 - progress) / 20).toFixed(1));
+        vanDistance.textContent = `${distance} km away`;
+
+        if (distance <= 0.5) {
+          vanStatus.textContent = 'Arriving';
+          vanStatus.className = 'status-pill status-accent';
+        } else if (distance <= 1.5) {
+          vanStatus.textContent = 'Nearby';
+          vanStatus.className = 'status-pill status-success';
+        } else {
+          vanStatus.textContent = 'On route';
+          vanStatus.className = 'status-pill status-info';
+        }
+      }
+
+      updateVanLocation();
+      setInterval(updateVanLocation, 4000);
+
+      if (!photoPreviews.hasChildNodes()) {
+        photoPreviews.innerHTML = '<p style="color: var(--text-secondary);">No photos selected yet. Upload clear shots of the damaged or service area.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

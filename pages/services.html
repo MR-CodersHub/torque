@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Auto-Mobiles Technical Solutions</title>
+  <meta name="description" content="Explore our high-performance electric drivetrain conversions, ecu tuning, custom telemetry integrations, and premium aesthetic modifications.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.359.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" aria-label="Auto-Mobiles Home">
+        <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <button class="hamburger" aria-expanded="false" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="home-niche.html" class="nav-link">SaaS Landing</a></li>
+          <li class="nav-dropdown">
+            <a href="services.html" class="nav-link active">Services <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="services.html">All Services</a></li>
+              <li class="dropdown-item"><a href="service-details.html">Service Details</a></li>
+            </ul>
+          </li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-dropdown">
+            <a href="blog.html" class="nav-link">Blog <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline;"></i></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item"><a href="blog.html">Articles</a></li>
+              <li class="dropdown-item"><a href="blog-details.html">Blog Post Details</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-dropdown profile-menu">
+            <button class="btn btn-secondary btn-sm profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
+              <i data-lucide="user"></i>
+            </button>
+            <ul class="dropdown-menu profile-dropdown">
+              <li class="dropdown-item"><a href="login-register.html">Sign In</a></li>
+              <li class="dropdown-item"><a href="login-register.html">Sign Up</a></li>
+              <li class="dropdown-item"><a href="admin-dashboard.html">Admin Dashboard</a></li>
+              <li class="dropdown-item"><a href="user-dashboard.html">User Dashboard</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="sun"></i>
+        </button>
+        <button class="control-btn dir-toggle" aria-label="Toggle Layout Direction">
+          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Title Section -->
+    <section class="py-12" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container text-center">
+        <h1>Engineering Services Catalog</h1>
+        <p class="mt-2">Discover how we optimize, electrify, and beautify next-gen automobiles.</p>
+      </div>
+    </section>
+
+    <!-- Search & Filter Controls -->
+    <section class="container mt-8">
+      <div class="glass-panel" style="padding: var(--space-4); display: flex; gap: var(--space-4); flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        
+        <!-- Filter Category Tabs -->
+        <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-sm filter-btn active" data-filter="all">All Solutions</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="electric">EV Engineering</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="software">Software Tuning</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="aesthetic">Aesthetics & Styling</button>
+        </div>
+
+        <!-- Search input -->
+        <div style="position: relative; width: 300px; max-width: 100%;">
+          <input type="text" id="service-search" placeholder="Search services..." class="form-control" style="padding-inline-start: var(--space-10);" />
+          <i data-lucide="search" style="position: absolute; inset-inline-start: var(--space-4); top: 50%; transform: translateY(-50%); width: 16px; color: var(--text-muted);"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Cards Grid -->
+    <section class="py-12">
+      <div class="container skeleton-wrapper">
+        
+        <!-- Skeleton loaders -->
+        <div class="grid-3 skeletons-container">
+          <div class="glass-panel skeleton" style="height: 300px;"></div>
+          <div class="glass-panel skeleton" style="height: 300px;"></div>
+          <div class="glass-panel skeleton" style="height: 300px;"></div>
+        </div>
+
+        <!-- Actual Grid Content (initially hidden by JS loader simulator) -->
+        <div class="actual-content" style="display: none;">
+          <div class="grid-3" id="services-grid">
+            
+            <!-- Card 1 -->
+            <div class="glass-panel service-card text-start" data-category="electric" data-search-terms="electric drivetrain conversion ev motor battery swap">
+              <span class="card-tag">EV Engineering</span>
+              <h3 class="mb-4" style="font-family: var(--font-primary); font-size: 1.25rem;">EV Drivetrain Retrofit</h3>
+              <p style="margin-bottom: var(--space-6); font-size: 0.95rem;">
+                Swap combustion engines with premium axial flux electric motors. Max torque, instant response.
+              </p>
+              <a href="service-details.html" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">
+                View Details <i data-lucide="arrow-right" style="width: 14px;"></i>
+              </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="glass-panel service-card text-start" data-category="software" data-search-terms="ecu remapping calibration software flash over the air">
+              <span class="card-tag">Software Tuning</span>
+              <h3 class="mb-4" style="font-family: var(--font-primary); font-size: 1.25rem;">ECU Custom Calibration</h3>
+              <p style="margin-bottom: var(--space-6); font-size: 0.95rem;">
+                Calibrate engine mapping, valve timing, and direct injection variables for maximum combustion output.
+              </p>
+              <a href="service-details.html" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">
+                View Details <i data-lucide="arrow-right" style="width: 14px;"></i>
+              </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="glass-panel service-card text-start" data-category="aesthetic" data-search-terms="aerodynamic body kit carbon fiber composites weight reduction">
+              <span class="card-tag">Aesthetics & Styling</span>
+              <h3 class="mb-4" style="font-family: var(--font-primary); font-size: 1.25rem;">Composite Aero Customization</h3>
+              <p style="margin-bottom: var(--space-6); font-size: 0.95rem;">
+                Install computational fluid dynamics tested carbon fiber spoilers, splitters, and lightweight panels.
+              </p>
+              <a href="service-details.html" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">
+                View Details <i data-lucide="arrow-right" style="width: 14px;"></i>
+              </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="glass-panel service-card text-start" data-category="electric" data-search-terms="battery system thermal pack management cooling modular packs">
+              <span class="card-tag">EV Engineering</span>
+              <h3 class="mb-4" style="font-family: var(--font-primary); font-size: 1.25rem;">Modular Battery Architectures</h3>
+              <p style="margin-bottom: var(--space-6); font-size: 0.95rem;">
+                Install modular battery systems tailored to weight limits, integrating smart active cooling lines.
+              </p>
+              <a href="service-details.html" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">
+                View Details <i data-lucide="arrow-right" style="width: 14px;"></i>
+              </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="glass-panel service-card text-start" data-category="software" data-search-terms="telemetry api cloud fleet dashboard connection remote mapping">
+              <span class="card-tag">Software Tuning</span>
+              <h3 class="mb-4" style="font-family: var(--font-primary); font-size: 1.25rem;">Fleet Cloud Telemetry Setup</h3>
+              <p style="margin-bottom: var(--space-6); font-size: 0.95rem;">
+                Configure real-time server integrations mapping telemetry outputs straight to your custom SaaS panel.
+              </p>
+              <a href="service-details.html" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">
+                View Details <i data-lucide="arrow-right" style="width: 14px;"></i>
+              </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="glass-panel service-card text-start" data-category="aesthetic" data-search-terms="detailing wrap paint protection ceramic coating restoration interior">
+              <span class="card-tag">Aesthetics & Styling</span>
+              <h3 class="mb-4" style="font-family: var(--font-primary); font-size: 1.25rem;">Detailing & Ceramic Coating</h3>
+              <p style="margin-bottom: var(--space-6); font-size: 0.95rem;">
+                Apply multi-stage paint corrections, hydrophobic ceramic glass coats, and clean full interior premium details.
+              </p>
+              <a href="service-details.html" class="btn btn-secondary btn-sm" style="margin-top: auto; align-self: flex-start;">
+                View Details <i data-lucide="arrow-right" style="width: 14px;"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-column">
+        <a href="../index.html" class="logo" style="margin-bottom: var(--space-4);">
+          <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+        </a>
+        <p style="font-size: 0.9rem;">
+          Pioneering the intersection of electric vehicles, software analytics, and custom performance engineering.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="home-niche.html">Analytics SaaS</a></li>
+          <li><a href="services.html">EV Conversions</a></li>
+          <li><a href="services.html">Performance Tuning</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pricing.html">Pricing Plans</a></li>
+          <li><a href="blog.html">Read Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="coming-soon.html">Coming Soon</a></li>
+          <li><a href="404.html">404 Demo</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Auto-Mobiles Digital Ecosystem. All rights reserved.</p>
+      <div style="display: flex; gap: var(--space-4);">
+        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+  <script>
+    // Search and filtering implementation
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('service-search');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.service-card');
+
+      function filterServices() {
+        const query = searchInput.value.toLowerCase().trim();
+        const activeFilterBtn = document.querySelector('.filter-btn.active');
+        const categoryFilter = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+
+        cards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          const searchTerms = card.getAttribute('data-search-terms') || '';
+          const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+          const cardDesc = card.querySelector('p').textContent.toLowerCase();
+
+          const matchesCategory = (categoryFilter === 'all' || cardCategory === categoryFilter);
+          const matchesSearch = (!query || 
+                                 cardTitle.includes(query) || 
+                                 cardDesc.includes(query) || 
+                                 searchTerms.includes(query));
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+            // Simple micro-animation fade in
+            card.style.opacity = 0;
+            setTimeout(() => {
+              card.style.transition = 'opacity 0.25s ease';
+              card.style.opacity = 1;
+            }, 10);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      searchInput.addEventListener('input', filterServices);
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterServices();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

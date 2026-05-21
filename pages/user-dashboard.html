@@ -1,24 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Dashboard | Auto-Mobiles Systems Control</title>
-  <meta name="description" content="Manage telemetry feeds, view connected fleet diagnostic status, process orders, and read client support inquiries.">
+  <title>User Dashboard | Torque EV Systems</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.svg">
+  <meta name="description" content="Manage your appointments, track service vans, and earn loyalty rewards.">
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.359.0/dist/umd/lucide.min.js"></script>
 </head>
 <body style="min-height: 100vh; background-color: var(--bg-primary);">
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
+ 
   <!-- Admin layout wrapper -->
   <div class="admin-layout">
     
     <!-- Sidebar navigation -->
-    <aside class="admin-sidebar" aria-label="Admin Sidebar">
+    <aside class="admin-sidebar" aria-label="User Sidebar">
       <div style="display: flex; gap: var(--space-2); align-items: center; margin-bottom: var(--space-4);">
-        <a href="../index.html" class="logo" aria-label="Auto-Mobiles Home">
+        <a href="../index.html" class="logo" aria-label="Torque EV Home">
         <img src="../assets/images/logo.svg" alt="logo" class="brand-logo"> TORQUE
       </a>
       </div>
@@ -26,23 +25,23 @@
       <nav aria-label="Dashboard Panels">
         <ul class="admin-menu">
           <li>
-            <button class="admin-menu-link active" data-target="panel-analytics" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
-              <i data-lucide="bar-chart-3"></i> <span>Overview</span>
+            <button class="admin-menu-link active" data-target="panel-home" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="home"></i> <span>Dashboard Home</span>
             </button>
           </li>
           <li>
-            <button class="admin-menu-link" data-target="panel-users" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
-              <i data-lucide="calendar"></i> <span>Bookings</span>
+            <button class="admin-menu-link" data-target="panel-book" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="calendar-plus"></i> <span>Book Appointment</span>
             </button>
           </li>
           <li>
-            <button class="admin-menu-link" data-target="panel-orders" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
-              <i data-lucide="map-pin"></i> <span>Track Van</span>
+            <button class="admin-menu-link" data-target="panel-estimate" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="camera"></i> <span>Photo Estimate</span>
             </button>
           </li>
           <li>
-            <button class="admin-menu-link" data-target="panel-messages" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
-              <i data-lucide="camera"></i> <span>Uploads</span> 
+            <button class="admin-menu-link" data-target="panel-tracking" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
+              <i data-lucide="map-pin"></i> <span>Live Tracking</span>
             </button>
           </li>
         </ul>
@@ -62,171 +61,146 @@
     <!-- Main Content Panel Area -->
     <main class="admin-content" id="main-content">
       
-      <!-- Panel 1: Analytics -->
-       <section class="tab-panel active" id="panel-analytics">
-      <div id="overview" class="glass-panel" style="padding: var(--space-8); margin-bottom: var(--space-8);">
-        <div style="display: flex; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; align-items: center;">
+      <!-- Panel 1: Home & Loyalty -->
+      <section class="tab-panel active" id="panel-home">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-8); flex-wrap: wrap; gap: var(--space-4);">
           <div>
-            <span class="card-tag">Customer Portal</span>
-            <h1 style="margin-top: var(--space-4);">Welcome back, User</h1>
-            <p style="max-width: 640px; margin-top: var(--space-4); color: var(--text-secondary);">Book appointments, preview packages, upload vehicle photos for estimates, watch the service van arrive, and redeem loyalty rewards all from one dashboard.</p>
+            <h1>Welcome Back, Marcus</h1>
+            <p>Manage your electric upgrades and track active appointments.</p>
           </div>
-          <div class="glass-panel" style="padding: var(--space-6); min-width: 240px; text-align: center; border: 1px solid rgba(var(--color-primary-rgb),0.2);">
-            <span style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase;">Loyalty Points</span>
-            <h2 style="margin: var(--space-3) 0; color: var(--color-primary);">1,420</h2>
-            <span style="font-size: 0.85rem; color: var(--text-muted);">Silver tier — 3 rewards unlocked</span>
-          </div>
-        </div>
-      </div>
-
-        <div id="rewards" class="glass-panel dashboard-card">
-          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
-            <div>
-              <h2>Loyalty Rewards</h2>
-              <p style="color: var(--text-secondary);">Track points, unlock benefits, and redeem offers instantly.</p>
-            </div>
-            <span class="status-pill status-success">Silver</span>
-          </div>
-          <div style="display: grid; gap: var(--space-4);">
-            <div class="glass-panel" style="padding: var(--space-5); background: rgba(var(--color-secondary-rgb, 59, 130, 246), 0.08); border-color: rgba(var(--color-secondary-rgb, 59, 130, 246), 0.16);">
-              <strong>3/5 Rewards claimed</strong>
-              <p style="color: var(--text-secondary); margin-top: var(--space-2);">Free exterior detail, priority slot booking, and 10% parts credit.</p>
-            </div>
-            <button class="btn btn-accent" id="btn-redeem-reward">Redeem reward</button>
+          <div class="glass-panel" style="padding: var(--space-3) var(--space-5); text-align: center; border-color: rgba(var(--color-primary-rgb), 0.5);">
+            <span style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">Loyalty Points</span>
+            <h4 style="font-size: 1.5rem; color: var(--color-primary); display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="star" style="fill: var(--color-primary);"></i> 1,250
+            </h4>
           </div>
         </div>
-        </section>
 
-      <!-- Panel 2: Users -->
-      <section class="tab-panel" id="panel-users">
-        
-      <div class="dashboard-grid">
-        <div id="bookings" class="glass-panel dashboard-card">
-          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
-            <div>
-              <h2>Next Appointment</h2>
-              <p style="color: var(--text-secondary);">Your next service slot is reserved and ready for confirmation.</p>
+        <div class="grid-2 mb-8">
+          <div class="glass-panel" style="padding: var(--space-6);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+              <h3 style="margin: 0; font-size: 1.25rem;">Upcoming Appointment</h3>
+              <span class="card-tag btn-sm" style="background: rgba(16, 185, 129, 0.2); color: var(--color-success);">CONFIRMED</span>
             </div>
-            <span class="status-pill status-info">Confirmed</span>
+            <p style="margin-bottom: var(--space-4);"><strong>Service:</strong> Performance Core Retrofitting</p>
+            <p style="margin-bottom: var(--space-4);"><strong>Date:</strong> Oct 14, 2026 - 10:00 AM</p>
+            <a href="#" class="btn btn-secondary btn-sm"><i data-lucide="calendar"></i> Reschedule</a>
           </div>
-          <div style="display: grid; gap: var(--space-4);">
-            <div style="display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap;">
-              <div>
-                <strong>Oct 22, 2026</strong>
-                <p style="font-size: 0.95rem; color: var(--text-secondary);">09:00 AM – 11:00 AM</p>
+
+          <div class="glass-panel" style="padding: var(--space-6); display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="margin-bottom: var(--space-2); font-size: 1.25rem;">Loyalty Rewards</h3>
+              <p style="font-size: 0.95rem;">You are 250 points away from a free aerodynamic spoiler installation or a $500 software upgrade credit.</p>
+            </div>
+            <div style="margin-top: var(--space-4);">
+              <div style="width: 100%; height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; margin-bottom: var(--space-2);">
+                <div style="height: 100%; width: 83%; background: var(--color-primary);"></div>
               </div>
-              <div>
-                <strong>Vehicle</strong>
-                <p style="font-size: 0.95rem; color: var(--text-secondary);">2022 Nissan Leaf</p>
+              <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+                <span>1,250 PTS</span>
+                <span>1,500 PTS</span>
               </div>
             </div>
-            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
-              <button class="btn btn-primary" id="btn-confirm-booking">Confirm & Notify</button>
-              <button class="btn btn-secondary" id="btn-reschedule">Request new time</button>
-            </div>
-          </div>
-        </div>
-        
-        <div class="glass-panel dashboard-card">
-          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
-            <div>
-              <h2>Appointments & Requests</h2>
-              <p style="color: var(--text-secondary);">Your upcoming bookings and active estimates.</p>
-            </div>
-            <button class="btn btn-secondary" id="btn-add-test-appointment">Add sample request</button>
-          </div>
-          <div class="table-responsive">
-            <table class="pricing-matrix" id="appointment-table">
-              <thead>
-                <tr>
-                  <th>Appointment</th>
-                  <th>Status</th>
-                  <th>Package</th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Battery health scan</td>
-                  <td><span class="status-pill status-success">Ready</span></td>
-                  <td>Premium Estimate</td>
-                  <td>Oct 22</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
 
-      <!-- Panel 3: Orders -->
-      <section class="tab-panel" id="panel-orders">
-       <div id="tracking" class="glass-panel dashboard-card" style="grid-column: span 2;">
-          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
-            <div>
-              <h2>Service Van Tracker</h2>
-              <p style="color: var(--text-secondary);">Follow the technician van as it approaches your location in real-time.</p>
+      <!-- Panel 2: Book Appointment -->
+      <section class="tab-panel" id="panel-book">
+        <h1 class="mb-4">Book New Service</h1>
+        <p class="mb-8">Select your required package and pick an available date.</p>
+        
+        <div class="glass-panel" style="padding: var(--space-8); max-width: 700px;">
+          <form class="needs-validation" id="booking-form" novalidate style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="book-service" class="form-label">Service Package</label>
+              <select id="book-service" required class="form-control">
+                <option value="">Select a package...</option>
+                <option value="lite">Lite Conversion ($19,000)</option>
+                <option value="core">Performance Core ($32,000)</option>
+                <option value="hyper">Hyper Track Suite ($55,000+)</option>
+                <option value="tune">Software Tuning ($1,500)</option>
+              </select>
+              <div class="tooltip">Please select a service package.</div>
             </div>
-            <span class="status-pill status-success" id="van-status-pill">On route</span>
-          </div>
-          <div class="map-viewport" aria-label="Service van location map">
-            <div class="map-dot" id="van-dot" aria-hidden="true"></div>
-            <div class="map-label" id="van-distance">2.4 km away</div>
-          </div>
-          <div style="display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-4);">
-            <div>
-              <strong>Estimated arrival</strong>
-              <p style="color: var(--text-secondary);">~18 minutes</p>
-            </div>
-            <div>
-              <strong>Current Route</strong>
-              <p style="color: var(--text-secondary);">Westbrook Ave → Main Street</p>
-            </div>
-          </div>
-        </div>
 
-        <div id="packages" class="glass-panel dashboard-card">
-          <div style="margin-bottom: var(--space-6);">
-            <h2>Select Service Package</h2>
-            <p style="color: var(--text-secondary);">Choose the package that matches your service needs. Your selection will be used for estimate and booking details.</p>
-          </div>
-          <div class="dashboard-package-grid">
-            <label class="package-card">
-              <input type="radio" name="service-package" value="Basic Inspection" checked>
-              <strong>Basic Inspection</strong>
-              <span>Vehicle health check, diagnostics, and quote.</span>
-            </label>
-            <label class="package-card">
-              <input type="radio" name="service-package" value="Standard Service">
-              <strong>Standard Service</strong>
-              <span>Includes oil, filter, brake check, and safety inspection.</span>
-            </label>
-            <label class="package-card">
-              <input type="radio" name="service-package" value="Premium Estimate">
-              <strong>Premium Estimate</strong>
-              <span>Customized estimate with photo-backed assessment and priority scheduling.</span>
-            </label>
-          </div>
-        </div>
-      </section>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="book-date" class="form-label">Preferred Date</label>
+              <input type="date" id="book-date" required class="form-control" />
+              <div class="tooltip">Please select a preferred date.</div>
+            </div>
 
-      <!-- Panel 4: Messages -->
-      <section class="tab-panel" id="panel-messages">
-        <div id="uploads" class="glass-panel dashboard-card" style="grid-column: span 2;">
-          <div style="display: flex; justify-content: space-between; align-items: start; gap: var(--space-4); margin-bottom: var(--space-6);">
-            <div>
-              <h2>Upload Vehicle Photos</h2>
-              <p style="color: var(--text-secondary);">Add images of your vehicle concerns so the techs can prepare an accurate estimate before arrival.</p>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="book-notes" class="form-label">Additional Requirements</label>
+              <textarea id="book-notes" rows="4" class="form-control" placeholder="Any specific requirements or existing modifications?"></textarea>
             </div>
-            <button class="btn btn-primary" id="btn-upload-mobile">Select photos</button>
-          </div>
-          <form class="needs-validation" id="upload-form">
-            <div class="form-group">
-              <label class="form-label" for="vehicle-photos">Upload up to 5 images</label>
-              <input type="file" class="form-control" id="vehicle-photos" accept="image/*" multiple aria-describedby="upload-help">
-              <div id="upload-help" style="font-size: 0.85rem; color: var(--text-muted); margin-top: var(--space-2);">Photos help us estimate damage, service time, and parts needs.</div>
-            </div>
+
+            <button type="submit" class="btn btn-primary" style="margin-top: var(--space-4);">
+              Confirm Booking <i data-lucide="check-circle"></i>
+            </button>
           </form>
-          <div class="image-preview-grid" id="photo-previews" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- Panel 3: Photo Estimate -->
+      <section class="tab-panel" id="panel-estimate">
+        <h1 class="mb-4">Upload Vehicle Photos</h1>
+        <p class="mb-8">Get a remote structural estimate by uploading photos of your vehicle's engine bay and chassis.</p>
+        
+        <div class="glass-panel" style="padding: var(--space-8); max-width: 700px; text-align: center;">
+          <div style="border: 2px dashed var(--border-color); padding: var(--space-12); border-radius: var(--border-radius-md); background: var(--bg-tertiary); margin-bottom: var(--space-6); position: relative; transition: all var(--transition-fast);" id="drop-zone">
+            <i data-lucide="upload-cloud" style="width: 48px; height: 48px; color: var(--color-primary); margin-bottom: var(--space-4);"></i>
+            <h3 style="margin-bottom: var(--space-2);">Drag & Drop Images</h3>
+            <p style="font-size: 0.9rem; margin-bottom: var(--space-4);">or click to browse from your device. Supported formats: JPG, PNG (Max 5MB)</p>
+            <input type="file" id="file-upload" multiple accept="image/*" style="opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer;" />
+          </div>
+          
+          <div id="file-list" style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-6); text-align: start;">
+            <!-- File items injected here -->
+          </div>
+
+          <button class="btn btn-primary w-100" id="upload-btn" style="width: 100%;" disabled>
+            Submit for Estimate
+          </button>
+        </div>
+      </section>
+
+      <!-- Panel 4: Live Van Tracking -->
+      <section class="tab-panel" id="panel-tracking">
+        <h1 class="mb-4">Live Service Van Tracking</h1>
+        <p class="mb-8">Track our mobile technician dispatch arriving at your location.</p>
+        
+        <div class="glass-panel" style="padding: var(--space-4); position: relative; overflow: hidden; border-radius: var(--border-radius-md);">
+          <!-- Map Background Simulation -->
+          <div style="background: var(--bg-tertiary); width: 100%; height: 400px; position: relative; border-radius: var(--border-radius-sm); overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            
+            <!-- Grid lines -->
+            <div style="position: absolute; inset: 0; background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.5;"></div>
+            
+            <p style="position: absolute; top: var(--space-4); left: var(--space-4); background: var(--bg-glass); padding: var(--space-2) var(--space-4); border-radius: var(--border-radius-sm); font-size: 0.85rem; z-index: 10; border: 1px solid var(--color-primary); backdrop-filter: blur(8px);">
+              <span style="color: var(--color-primary); font-weight: 700;">ETA:</span> 14 mins away
+            </p>
+
+            <!-- Destination Marker -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+              <i data-lucide="map-pin" style="color: var(--color-danger); width: 32px; height: 32px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));"></i>
+            </div>
+
+            <!-- Moving Van Marker -->
+            <div id="van-marker" style="position: absolute; top: 70%; left: 20%; transform: translate(-50%, -50%); transition: all 1s ease-in-out;">
+              <div style="background: var(--color-primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-glow);">
+                <i data-lucide="truck" style="color: #fff; width: 20px; height: 20px;"></i>
+              </div>
+              <div style="position: absolute; width: 60px; height: 60px; border: 2px solid var(--color-primary); border-radius: 50%; top: -10px; left: -10px; animation: pulse 2s infinite;"></div>
+            </div>
+
+            <style>
+              @keyframes pulse {
+                0% { transform: scale(0.9); opacity: 1; }
+                100% { transform: scale(1.5); opacity: 0; }
+              }
+            </style>
+          </div>
         </div>
       </section>
 
@@ -252,112 +226,70 @@
         });
       });
 
-      // Suspended User Simulation
-      const suspendButtons = document.querySelectorAll('.user-ban-btn');
-      suspendButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const isSuspended = btn.textContent === 'Activate';
-          btn.textContent = isSuspended ? 'Suspend' : 'Activate';
-          btn.classList.toggle('btn-primary', !isSuspended);
-          btn.classList.toggle('btn-secondary', isSuspended);
+      // Book Appointment Logic
+      const bookingForm = document.getElementById('booking-form');
+      bookingForm.addEventListener('submit', (e) => {
+        let isValid = true;
+        const inputs = bookingForm.querySelectorAll('input[required], select[required]');
+        inputs.forEach(input => {
+          if (!input.value) isValid = false;
         });
+
+        if (isValid) {
+          e.preventDefault();
+          alert('Appointment Confirmed! Check your dashboard for details.');
+          bookingForm.reset();
+        }
       });
 
-      // Live Telemetry Counter simulation
-      const counterElement = document.getElementById('metrics-counter');
-      let counterVal = 42893120;
-      setInterval(() => {
-        counterVal += Math.floor(Math.random() * 8) + 1;
-        counterElement.textContent = counterVal.toLocaleString();
-      }, 1000);
+      // Photo Upload Logic
+      const fileUpload = document.getElementById('file-upload');
+      const fileList = document.getElementById('file-list');
+      const uploadBtn = document.getElementById('upload-btn');
+      const dropZone = document.getElementById('drop-zone');
 
-      // LocalStorage Inbox messages retriever
-      const inboxContainer = document.getElementById('dashboard-inbox');
-      const badge = document.getElementById('msg-badge');
-
-      function loadMessages() {
-        inboxContainer.innerHTML = '';
-        const messages = JSON.parse(localStorage.getItem('admin_messages') || '[]');
+      fileUpload.addEventListener('change', (e) => {
+        const files = Array.from(e.target.files);
+        fileList.innerHTML = '';
         
-        // Add 2 initial default messages if inbox empty to keep layout rich
-        if (messages.length === 0) {
-          const defaults = [
-            {
-              id: 1,
-              name: 'John Doe',
-              email: 'john@carbon-logistics.de',
-              subject: 'conversion',
-              text: 'Interested in converting 4 vans to 800V lithium cells. Please send full volume custom quote options.',
-              date: '10:45 AM'
-            },
-            {
-              id: 2,
-              name: 'Elena Rostova',
-              email: 'e.rostova@analytics-hub.eu',
-              subject: 'telemetry',
-              text: 'Is there a sandbox API endpoint where we can push mock cell currents data to test limits before purchasing Fleet Pro?',
-              date: '09:12 AM'
-            }
-          ];
-          localStorage.setItem('admin_messages', JSON.stringify(defaults));
-          loadMessages();
-          return;
-        }
-
-        // Render badge count
-        badge.textContent = messages.length;
-        badge.style.display = messages.length > 0 ? 'inline-block' : 'none';
-
-        messages.forEach(msg => {
-          const card = document.createElement('div');
-          card.className = 'glass-panel';
-          card.style.padding = 'var(--space-6)';
-          card.style.display = 'flex';
-          card.style.justifyContent = 'space-between';
-          card.style.alignItems = 'start';
-          card.style.gap = 'var(--space-4)';
-          card.style.flexWrap = 'wrap';
-
-          card.innerHTML = `
-            <div style="flex: 1;">
-              <div style="display: flex; gap: var(--space-3); align-items: center; margin-bottom: var(--space-2);">
-                <span class="card-tag btn-sm">${msg.subject.toUpperCase()}</span>
-                <strong>${escapeHTML(msg.name)}</strong>
-                <span style="font-size: 0.8rem; color: var(--text-muted);">&bull; ${msg.email} &bull; ${msg.date}</span>
-              </div>
-              <p style="font-size: 0.95rem; line-height: 1.6;">${escapeHTML(msg.text)}</p>
-            </div>
-            <button class="btn btn-secondary btn-sm delete-msg-btn" data-id="${msg.id}" style="color: var(--color-danger); border-color: rgba(239, 68, 68, 0.3);">
-              <i data-lucide="trash" style="width: 14px; height: 14px; vertical-align: middle;"></i> Remove
-            </button>
-          `;
-
-          inboxContainer.appendChild(card);
-        });
-
-        // Initialize newly appended trash icons
-        lucide.createIcons();
-
-        // Add Delete events
-        const deleteButtons = inboxContainer.querySelectorAll('.delete-msg-btn');
-        deleteButtons.forEach(btn => {
-          btn.addEventListener('click', () => {
-            const idToDelete = parseInt(btn.getAttribute('data-id'));
-            const updated = JSON.parse(localStorage.getItem('admin_messages') || '[]')
-                              .filter(m => m.id !== idToDelete);
-            localStorage.setItem('admin_messages', JSON.stringify(updated));
-            loadMessages();
+        if (files.length > 0) {
+          uploadBtn.removeAttribute('disabled');
+          files.forEach(file => {
+            const item = document.createElement('div');
+            item.style.background = 'var(--bg-secondary)';
+            item.style.padding = 'var(--space-2) var(--space-4)';
+            item.style.borderRadius = 'var(--border-radius-sm)';
+            item.style.fontSize = '0.85rem';
+            item.style.border = '1px solid var(--border-color)';
+            item.style.display = 'flex';
+            item.style.alignItems = 'center';
+            item.style.gap = 'var(--space-2)';
+            item.innerHTML = `<i data-lucide="image" style="width: 14px;"></i> ${file.name}`;
+            fileList.appendChild(item);
           });
-        });
-      }
+          lucide.createIcons();
+        } else {
+          uploadBtn.setAttribute('disabled', 'true');
+        }
+      });
 
-      function escapeHTML(str) {
-        return str.replace(/[&<>'"]/g, 
-          tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
-        );
-      }
+      uploadBtn.addEventListener('click', () => {
+        alert('Photos uploaded successfully! Our engineers will review and provide an estimate within 24 hours.');
+        fileList.innerHTML = '';
+        uploadBtn.setAttribute('disabled', 'true');
+      });
 
-      loadMessages();
+      // Map Van Animation Logic
+      const vanMarker = document.getElementById('van-marker');
+      let x = 20;
+      let y = 70;
+      setInterval(() => {
+        // Move towards center (50, 50)
+        if (x < 48) x += 2;
+        if (y > 52) y -= 1;
+        vanMarker.style.left = `${x}%`;
+        vanMarker.style.top = `${y}%`;
+      }, 2000);
     });
   </script>
 </body>

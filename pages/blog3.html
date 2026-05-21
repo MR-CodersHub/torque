@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post | Converting Classic Chassis to EV</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.svg">
+  <meta name="description" content="Read our in-depth engineering analysis on custom electric retrofitting and battery cooling management layouts.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.359.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header Section -->
+  <header>
+    <div class="container nav-container">
+      <a href="../index.html" class="logo" aria-label="Torque EV Home">
+        <img src="../assets/images/logo.svg" alt="logo" class="brand-logo"></i> TORQUE
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <button class="hamburger" aria-expanded="false" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="home-niche.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li>
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li>
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="control-btn theme-toggle" aria-label="Toggle Theme">
+          <i data-lucide="sun"></i>
+        </button>
+        <div class="nav-dropdown profile-menu" style="position: relative;">
+          <button class="control-btn profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
+            <i data-lucide="user"></i>
+          </button>
+          <ul class="dropdown-menu profile-dropdown">
+            <li class="dropdown-item"><a href="login-register.html">Sign In</a></li>
+            <li class="dropdown-item"><a href="login-register.html">Sign Up</a></li>
+            <li class="dropdown-item"><a href="admin-dashboard.html">Admin Dashboard</a></li>
+            <li class="dropdown-item"><a href="user-dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main id="main-content" class="container py-12">
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-8); align-items: start;">
+      
+      <!-- Article Left Column -->
+      <article>
+        <div style="display: flex; gap: var(--space-3); align-items: center; margin-bottom: var(--space-2);">
+          <span class="card-tag">Performance</span>
+          <span style="font-size: 0.85rem; color: var(--text-muted);"><i data-lucide="clock" style="width: 12px; height: 12px; vertical-align: middle;"></i> 8 min read</span>
+        </div>
+        
+        <h1 style="margin-bottom: var(--space-4); line-height: 1.2;">Calibrating Fuel Map Curves for Altitude Deviations</h1>
+        
+        <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-6); border-bottom: 1px solid var(--border-color); padding-bottom: var(--space-4);">
+          <div class="flex-center" style="width: 40px; height: 40px; border-radius: 50%; background: var(--bg-tertiary);">
+            <i data-lucide="user" style="color: var(--color-primary); width: 20px;"></i>
+          </div>
+          <div>
+            <strong style="display: block; font-size: 0.95rem;">Claire Dupont</strong>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Lead Mechanical EV Engineer</span>
+          </div>
+        </div>
+
+        <!-- Article Body -->
+        <div style="font-size: 1.05rem; line-height: 1.8; display: flex; flex-direction: column; gap: var(--space-4);">
+          <p>
+            Upgrading a legacy petrol engine with high voltage cells and high torque brushless electric motors is an engineering challenge. The core layout relies on proper chassis load calculations and rigid structural bracket designs.
+          </p>
+
+          <h3>1. Structural Calculations and Weight Distribution</h3>
+          <p>
+            When removing a standard cast-iron engine, you extract roughly 200kg to 300kg of load from the front axle. Substituting this weight with battery cell packs and a compact axial-flux motor requires careful mapping to preserve the center of gravity.
+          </p>
+
+          <!-- Mock Code block illustrating code config requirement -->
+          <div class="glass-panel" style="padding: var(--space-4); background-color: var(--bg-tertiary); font-family: monospace; font-size: 0.9rem; overflow-x: auto; border-inline-start: 4px solid var(--color-primary); border-radius: var(--border-radius-sm); margin-block: var(--space-4);">
+<pre style="color: var(--text-primary);">
+// Hypothetical Battery State-Of-Charge calculation map
+function computeThermalDecline(tempCelsius, currentAmps) {
+  const coefficientBase = 0.0035;
+  let dissipationRate = 1.0;
+  if (tempCelsius > 45) {
+    dissipationRate = 1.25; // Trigger thermal throttling
+  }
+  return currentAmps * coefficientBase * dissipationRate;
+}
+</pre>
+          </div>
+
+          <h3>2. Dynamic Traction Tuning</h3>
+          <p>
+            Traditional mechanics rely on gears to ramp up horsepower. EVs, conversely, deliver instant peak torque. Without software traction mapping, classic drive axles can fracture under sudden load spikes.
+          </p>
+        </div>
+
+        <!-- Share bar -->
+        <div style="display: flex; gap: var(--space-4); align-items: center; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding-block: var(--space-4); margin-top: var(--space-8);">
+          <span style="font-weight: 600;">Share Article:</span>
+          <a href="#" aria-label="Share on Twitter"><i data-lucide="twitter"></i></a>
+          <a href="#" aria-label="Share on Facebook"><i data-lucide="facebook"></i></a>
+          <a href="#" aria-label="Share on LinkedIn"><i data-lucide="linkedin"></i></a>
+        </div>
+
+        <!-- Comment Section -->
+        <div style="margin-top: var(--space-10);">
+          <h3 class="mb-6">Write a Comment</h3>
+          
+          <form class="needs-validation" id="comment-form" novalidate style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-8);">
+            <div class="grid-2">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="c-name" class="form-label">Full Name</label>
+                <input type="text" id="c-name" required class="form-control" />
+                <div class="tooltip">Name is required.</div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="c-email" class="form-label">Email Address</label>
+                <input type="email" id="c-email" required class="form-control" />
+                <div class="tooltip">Valid email is required.</div>
+              </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="c-text" class="form-label">Comment</label>
+              <textarea id="c-text" required rows="4" class="form-control" style="resize: vertical;"></textarea>
+              <div class="tooltip">Please enter your comment.</div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">Post Comment</button>
+          </form>
+
+          <!-- Comments Feed -->
+          <div id="comments-feed" style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <div class="glass-panel" style="padding: var(--space-4);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2);">
+                <strong>Alexander K.</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">May 16, 2026</span>
+              </div>
+              <p style="font-size: 0.95rem;">
+                Extremely detailed post. The altitude remapping formula was helpful. Looking forward to your article on thermal cooling jackets.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- Sidebar Right Column -->
+      <aside style="display: flex; flex-direction: column; gap: var(--space-8);">
+        
+        <!-- Sidebar Newsletter -->
+        <div class="glass-panel" style="padding: var(--space-6);">
+          <h3 class="mb-4">Weekly Insights</h3>
+          <p style="font-size: 0.9rem; margin-bottom: var(--space-4);">Get next-gen EV mapping specs sent straight to your inbox.</p>
+          <form class="needs-validation" novalidate style="display: flex; flex-direction: column; gap: var(--space-3);">
+            <div class="form-group" style="margin-bottom: 0;">
+              <input type="email" required placeholder="Enter email address" class="form-control" />
+              <div class="tooltip">Please enter a valid email.</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Popular Articles -->
+        <div class="glass-panel" style="padding: var(--space-6);">
+          <h3 class="mb-4">Popular Posts</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-4);">
+            <li>
+              <a href="blog-details.html" style="font-weight: 500; font-size: 0.95rem;" class="nav-link">Scaling Low-Latency WebSockets for Fleets</a>
+              <span style="display: block; font-size: 0.75rem; color: var(--text-muted);">Telemetry &bull; 5 min read</span>
+            </li>
+            <li style="border-top: 1px solid var(--border-color); padding-top: var(--space-3);">
+              <a href="blog-details.html" style="font-weight: 500; font-size: 0.95rem;" class="nav-link">Calibrating Fuel Map Curves for altitude</a>
+              <span style="display: block; font-size: 0.75rem; color: var(--text-muted);">Performance &bull; 6 min read</span>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+    <!-- Footer Section -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-column">
+        <a href="../index.html" class="logo" aria-label="Torque EV Home">
+        <img src="../assets/images/logo.svg" alt="logo" class="brand-logo"></i> TORQUE
+      </a>
+        <p style="font-size: 0.9rem; padding-top: 20px;">
+          Pioneering the intersection of electric vehicles, software analytics, and custom performance engineering.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h4>Solutions</h4>
+        <ul class="footer-links">
+          <li><a href="home-niche.html">Home</a></li>
+          <li><a href="contact.html">Home 2</a></li>
+          <li><a href="services.html">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pricing.html">Pricing Plans</a></li>
+          <li><a href="blog.html">Read Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+       <p style="font-size: 1rem;">
+        <i data-lucide="phone"></i><span style="padding-left: 15px; color: white;">+91 1234567890</span>
+        </p>
+        <p style="font-size: 1rem;">
+        <i data-lucide="pin"></i><span style="padding-left: 15px; color: white;">Mark Avenue, NY</span>
+        </p>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Torque EV Digital Ecosystem. All rights reserved.</p>
+      <div style="display: flex; gap: var(--space-4);">
+        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const commentForm = document.getElementById('comment-form');
+      const feed = document.getElementById('comments-feed');
+
+      commentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const nameInput = document.getElementById('c-name');
+        const emailInput = document.getElementById('c-email');
+        const textInput = document.getElementById('c-text');
+
+        if (nameInput.value && emailInput.value.includes('@') && textInput.value) {
+          // Create comment card
+          const card = document.createElement('div');
+          card.className = 'glass-panel';
+          card.style.padding = 'var(--space-4)';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(10px)';
+
+          card.innerHTML = `
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2);">
+              <strong>${escapeHTML(nameInput.value)}</strong>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Just now</span>
+            </div>
+            <p style="font-size: 0.95rem;">${escapeHTML(textInput.value)}</p>
+          `;
+
+          feed.insertBefore(card, feed.firstChild);
+          
+          setTimeout(() => {
+            card.style.transition = 'all 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 50);
+
+          nameInput.value = '';
+          emailInput.value = '';
+          textInput.value = '';
+        }
+      });
+
+      function escapeHTML(str) {
+        return str.replace(/[&<>'"]/g, 
+          tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+        );
+      }
+    });
+  </script>
+</body>
+</html>

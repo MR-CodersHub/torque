@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Management | Auto-Mobiles Portal</title>
+  <title>Account Management | Torque EV Portal</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.svg">
   <meta name="description" content="Sign in to your fleet telemetry dashboard, update credentials, or create a developer calibration profile.">
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.359.0/dist/umd/lucide.min.js"></script>
@@ -11,20 +12,46 @@
 <body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header Section -->
+    <!-- Header Section -->
   <header>
     <div class="container nav-container">
-      <a href="../index.html" class="logo" aria-label="Auto-Mobiles Home">
-        <img src="../assets/images/logo.svg" class="brand-logo">TORQUE
+      <a href="../index.html" class="logo" aria-label="Torque EV Home">
+        <img src="../assets/images/logo.svg" alt="logo" class="brand-logo"></i> TORQUE
       </a>
+      
+      <nav aria-label="Main Navigation">
+        <button class="hamburger" aria-expanded="false" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="home-niche.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li>
+            <a href="services.html" class="nav-link">Services</a>
+          </li>
+          <li>
+            <a href="blog.html" class="nav-link">Blog</a>
+          </li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
       <div class="nav-controls">
         <button class="control-btn theme-toggle" aria-label="Toggle Theme">
           <i data-lucide="sun"></i>
         </button>
-        <!-- <button class="control-btn dir-toggle" aria-label="Toggle Layout Direction">
-          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
-        </button> -->
+        <div class="nav-dropdown profile-menu" style="position: relative;">
+          <button class="control-btn profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
+            <i data-lucide="user"></i>
+          </button>
+          <ul class="dropdown-menu profile-dropdown">
+            <li class="dropdown-item"><a href="login-register.html">Sign In</a></li>
+            <li class="dropdown-item"><a href="login-register.html">Sign Up</a></li>
+            <li class="dropdown-item"><a href="admin-dashboard.html">Admin Dashboard</a></li>
+            <li class="dropdown-item"><a href="user-dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>

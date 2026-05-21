@@ -41,7 +41,7 @@
           </li>
           <li>
             <button class="admin-menu-link" data-target="panel-messages" style="background: transparent; border: none; width: 100%; text-align: start; cursor: pointer;">
-              <i data-lucide="mail"></i> <span>Messages</span> <span id="msg-badge" style="background: var(--color-danger); color: #fff; font-size: 0.7rem; padding: 2px 6px; border-radius: 20px; display: none;"></span>
+              <i data-lucide="mail"></i> <span>Messages</span>
             </button>
           </li>
         </ul>
@@ -295,17 +295,14 @@
               id: 1,
               name: 'John Doe',
               email: 'john@carbon-logistics.de',
-              subject: 'conversion',
               text: 'Interested in converting 4 vans to 800V lithium cells. Please send full volume custom quote options.',
-              date: '10:45 AM'
+              
             },
             {
               id: 2,
               name: 'Elena Rostova',
               email: 'e.rostova@analytics-hub.eu',
-              subject: 'telemetry',
               text: 'Is there a sandbox API endpoint where we can push mock cell currents data to test limits before purchasing Fleet Pro?',
-              date: '09:12 AM'
             }
           ];
           localStorage.setItem('admin_messages', JSON.stringify(defaults));

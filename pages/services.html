@@ -15,7 +15,7 @@
   <header>
     <div class="container nav-container">
       <a href="../index.html" class="logo" aria-label="Auto-Mobiles Home">
-        <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+        <img src="../assets/images/logo.svg" alt="logo" class="brand-logo"> TORQUE
       </a>
       
       <nav aria-label="Main Navigation">
@@ -24,35 +24,11 @@
         </button>
         <ul class="nav-menu">
           <li><a href="../index.html" class="nav-link">Home</a></li>
-          <li><a href="home-niche.html" class="nav-link">SaaS Landing</a></li>
-          <li class="nav-dropdown">
-            <a href="services.html" class="nav-link active">Services <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline;"></i></a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="services.html">All Services</a></li>
-              <li class="dropdown-item"><a href="service-details.html">Service Details</a></li>
-            </ul>
-          </li>
-          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-          <li class="nav-dropdown">
-            <a href="blog.html" class="nav-link">Blog <i data-lucide="chevron-down" style="width: 14px; height: 14px; display: inline;"></i></a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="blog.html">Articles</a></li>
-              <li class="dropdown-item"><a href="blog-details.html">Blog Post Details</a></li>
-            </ul>
-          </li>
+          <li><a href="home-niche.html" class="nav-link">Home 2</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li class="nav-dropdown profile-menu">
-            <button class="btn btn-secondary btn-sm profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
-              <i data-lucide="user"></i>
-            </button>
-            <ul class="dropdown-menu profile-dropdown">
-              <li class="dropdown-item"><a href="login-register.html">Sign In</a></li>
-              <li class="dropdown-item"><a href="login-register.html">Sign Up</a></li>
-              <li class="dropdown-item"><a href="admin-dashboard.html">Admin Dashboard</a></li>
-              <li class="dropdown-item"><a href="user-dashboard.html">User Dashboard</a></li>
-            </ul>
-          </li>
         </ul>
       </nav>
 
@@ -60,9 +36,17 @@
         <button class="control-btn theme-toggle" aria-label="Toggle Theme">
           <i data-lucide="sun"></i>
         </button>
-        <button class="control-btn dir-toggle" aria-label="Toggle Layout Direction">
-          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
-        </button>
+        <div class="nav-dropdown profile-menu" style="position: relative;">
+          <button class="control-btn profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
+            <i data-lucide="user"></i>
+          </button>
+          <ul class="dropdown-menu profile-dropdown">
+            <li class="dropdown-item"><a href="login-register.html">Sign In</a></li>
+            <li class="dropdown-item"><a href="login-register.html">Sign Up</a></li>
+            <li class="dropdown-item"><a href="admin-dashboard.html">Admin Dashboard</a></li>
+            <li class="dropdown-item"><a href="user-dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
@@ -191,25 +175,95 @@
       </div>
     </section>
 
+    <!-- Process & FAQ Section -->
+    <section class="py-20" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="text-center mb-8">
+          <span class="card-tag" style="margin-inline: auto;">How We Work</span>
+          <h2 class="mt-4">Our Service Process</h2>
+        </div>
+
+        <div class="grid-4" style="gap: var(--space-4);">
+          <div class="glass-panel" style="padding: var(--space-6); text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; margin-inline: auto; margin-bottom: var(--space-4);">1</div>
+            <h3 style="font-family: var(--font-primary); margin-bottom: var(--space-2);">Consultation</h3>
+            <p style="font-size: 0.85rem;">Free initial assessment to understand your vehicle and goals.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-6); text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; margin-inline: auto; margin-bottom: var(--space-4);">2</div>
+            <h3 style="font-family: var(--font-primary); margin-bottom: var(--space-2);">Design & Plan</h3>
+            <p style="font-size: 0.85rem;">Custom engineering plan tailored to your specifications.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-6); text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; margin-inline: auto; margin-bottom: var(--space-4);">3</div>
+            <h3 style="font-family: var(--font-primary); margin-bottom: var(--space-2);">Implementation</h3>
+            <p style="font-size: 0.85rem;">Expert execution with real-time progress tracking.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-6); text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.5rem; margin-inline: auto; margin-bottom: var(--space-4);">4</div>
+            <h3 style="font-family: var(--font-primary); margin-bottom: var(--space-2);">Testing & Support</h3>
+            <p style="font-size: 0.85rem;">Comprehensive QA and ongoing technical support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Guarantee Section -->
+    <section class="py-20">
+      <div class="container text-center">
+        <span class="card-tag" style="margin-inline: auto;">Our Guarantee</span>
+        <h2 class="mt-4 mb-8">Quality & Reliability You Can Trust</h2>
+
+        <div class="grid-3">
+          <div class="glass-panel" style="padding: var(--space-6); text-start;">
+            <div style="margin-bottom: var(--space-4);">
+              <i data-lucide="shield-check" style="width: 32px; height: 32px; color: var(--color-primary);"></i>
+            </div>
+            <h3 style="font-family: var(--font-primary); margin-bottom: var(--space-2);">Warranty Coverage</h3>
+            <p style="font-size: 0.9rem;">All services backed by our 2-year performance warranty. If something fails, we fix it at no cost.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-6); text-start;">
+            <div style="margin-bottom: var(--space-4);">
+              <i data-lucide="certified" style="width: 32px; height: 32px; color: var(--color-primary);"></i>
+            </div>
+            <h3 style="font-family: var(--font-primary); margin-bottom: var(--space-2);">Industry Certified</h3>
+            <p style="font-size: 0.9rem;">Our engineers hold advanced certifications from leading automotive and software organizations globally.</p>
+          </div>
+
+          <div class="glass-panel" style="padding: var(--space-6); text-start;">
+            <div style="margin-bottom: var(--space-4);">
+              <i data-lucide="phone" style="width: 32px; height: 32px; color: var(--color-primary);"></i>
+            </div>
+            <h3 style="font-family: var(--font-primary); margin-bottom: var(--space-2);">24/7 Support</h3>
+            <p style="font-size: 0.9rem;">Dedicated support team available round-the-clock for troubleshooting and technical assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer Section -->
   <footer>
     <div class="container footer-grid">
       <div class="footer-column">
-        <a href="../index.html" class="logo" style="margin-bottom: var(--space-4);">
-          <i data-lucide="gauge"></i> AUTO-<span>MOBILES</span>
+        <a href="../index.html" class="logo" aria-label="Auto-Mobiles Home">
+          <img src="../assets/images/logo.svg" alt="logo" class="brand-logo"> TORQUE
         </a>
-        <p style="font-size: 0.9rem;">
+        <p style="font-size: 0.9rem; padding-top: 20px;">
           Pioneering the intersection of electric vehicles, software analytics, and custom performance engineering.
         </p>
       </div>
       <div class="footer-column">
         <h4>Solutions</h4>
         <ul class="footer-links">
-          <li><a href="home-niche.html">Analytics SaaS</a></li>
-          <li><a href="services.html">EV Conversions</a></li>
-          <li><a href="services.html">Performance Tuning</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="home-niche.html">Home 2</a></li>
+          <li><a href="services.html">Services</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -222,11 +276,12 @@
       </div>
       <div class="footer-column">
         <h4>Contact</h4>
-        <ul class="footer-links">
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="coming-soon.html">Coming Soon</a></li>
-          <li><a href="404.html">404 Demo</a></li>
-        </ul>
+        <p style="font-size: 1rem;">
+          <i data-lucide="phone"></i><span style="padding-left: 15px; color: white;">+91 1234567890</span>
+        </p>
+        <p style="font-size: 1rem;">
+          <i data-lucide="pin"></i><span style="padding-left: 15px; color: white;">Mark Avenue, NY</span>
+        </p>
       </div>
     </div>
     

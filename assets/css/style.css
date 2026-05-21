@@ -771,7 +771,136 @@ footer {
     justify-content: space-around;
   }
 }
+/* =========================
+   DESKTOP DEFAULT
+========================= */
 
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.admin-sidebar {
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.admin-content {
+  flex: 1;
+  padding: var(--space-6);
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   MOBILE SIDEBAR
+========================= */
+
+@media (max-width: 768px) {
+
+  .admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 100vh;
+    z-index: 999;
+    padding: 16px 10px;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .admin-content {
+    margin-left: 72px;
+    width: calc(100% - 72px);
+    padding: var(--space-4);
+  }
+
+  /* Hide text labels */
+  .admin-sidebar .logo {
+    font-size: 0;
+    justify-content: center;
+  }
+
+  .admin-sidebar .brand-logo {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+  }
+
+  .admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .admin-menu li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .admin-menu-link {
+    width: 52px !important;
+    height: 52px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    margin-inline: auto;
+  }
+
+  /* Hide menu text */
+  .admin-menu-link span {
+    display: none;
+  }
+
+  .admin-menu-link i {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Bottom controls */
+  .admin-sidebar .control-btn,
+  .admin-sidebar .btn {
+    width: 52px !important;
+    height: 52px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .admin-sidebar .btn {
+    font-size: 0;
+  }
+
+  .admin-sidebar .btn::before {
+    content: "⎋";
+    font-size: 18px;
+  }
+
+  /* Responsive grids */
+  .grid-4,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 700px;
+  }
+}
 .dashboard-layout {
   display: flex;
   min-height: 100vh;

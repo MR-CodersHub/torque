@@ -271,8 +271,71 @@ p {
 /* Spacing Helpers */
 .py-12 { padding-block: var(--space-12); }
 .py-20 { padding-block: var(--space-20); }
+.mt-2 { margin-top: var(--space-2); }
 .mt-4 { margin-top: var(--space-4); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
 .mb-8 { margin-bottom: var(--space-8); }
+.mb-12 { margin-bottom: var(--space-12); }
+
+/* Contact Page Grid & Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.contact-details-card {
+  padding: var(--space-6);
+}
+
+.contact-map-card {
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.contact-form-card {
+  padding: var(--space-8);
+}
+
+/* Responsive Breakpoints for Contact Page */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-grid {
+    gap: var(--space-6);
+  }
+  
+  .contact-details-card {
+    padding: var(--space-5) var(--space-4) !important;
+  }
+  
+  .contact-map-card {
+    padding: var(--space-4) var(--space-3) !important;
+  }
+  
+  .contact-form-card {
+    padding: var(--space-6) var(--space-4) !important;
+  }
+
+  .contact-form-card .btn {
+    width: 100%;
+  }
+}
 
 /* Buttons */
 .btn {
